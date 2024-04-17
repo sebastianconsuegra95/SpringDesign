@@ -1,17 +1,17 @@
 [
     {
-        "id": "2ba91cae94e20ce7",
-        "type": "tab",
-        "label": "MQTT and Modbus Client",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "6705bbb95f3252fd",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2ba91cae94e20ce7",
+        "type": "tab",
+        "label": "MQTT and Modbus Client",
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -21,6 +21,50 @@
         "label": "Modbus HTTP",
         "disabled": true,
         "info": ""
+    },
+    {
+        "id": "289a27507fb48f90",
+        "type": "group",
+        "z": "6705bbb95f3252fd",
+        "name": "Input",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c2f5c11bd2d0da4d",
+            "51584db6980c1f5a",
+            "741c254551d25eaa",
+            "71b3fea8f5cfa766",
+            "1e7b1c0c85ee8581",
+            "73ac451f7b29c2d8"
+        ],
+        "x": 254,
+        "y": 139,
+        "w": 232,
+        "h": 362
+    },
+    {
+        "id": "b2946fec93a18c24",
+        "type": "group",
+        "z": "6705bbb95f3252fd",
+        "name": "Output",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "f8654d14b6d6374c",
+            "86266820fde506d9",
+            "ce390bfb91dadf76",
+            "d8700af40d7fbf22",
+            "c19bf4a8073f5583",
+            "1793fa6234bd2c8d",
+            "7d3c975342dd7c57",
+            "16aaff28b758dcaa"
+        ],
+        "x": 734,
+        "y": 139,
+        "w": 232,
+        "h": 382
     },
     {
         "id": "5cbec47f9daa574f",
@@ -166,6 +210,608 @@
         "commandDelay": 1,
         "clientTimeout": 1000,
         "reconnectTimeout": 2000
+    },
+    {
+        "id": "69b8262d1a3bba40",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ce312c8a6e8734f6",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "fceac92883eed5ce",
+        "type": "ui_group",
+        "name": "Input",
+        "tab": "69b8262d1a3bba40",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f6603a94ad0a668e",
+        "type": "ui_group",
+        "name": "Output",
+        "tab": "69b8262d1a3bba40",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2f5c11bd2d0da4d",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "D espira",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 400,
+        "y": 180,
+        "wires": [
+            [
+                "339ec95935cf7ee7"
+            ]
+        ]
+    },
+    {
+        "id": "51584db6980c1f5a",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "D exterior",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "f9659620c6d7b24d"
+            ]
+        ]
+    },
+    {
+        "id": "741c254551d25eaa",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "G material [kpsi]",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "2b9bcc684c202527"
+            ]
+        ]
+    },
+    {
+        "id": "71b3fea8f5cfa766",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "Na",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "5ea9b80ab7aaa5d1"
+            ]
+        ]
+    },
+    {
+        "id": "1e7b1c0c85ee8581",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "Diametro boq (mm)",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 370,
+        "y": 360,
+        "wires": [
+            [
+                "6e1e9862400e9cdc"
+            ]
+        ]
+    },
+    {
+        "id": "f8654d14b6d6374c",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "D espira",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 820,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "86266820fde506d9",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "D exterior",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ce390bfb91dadf76",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "G material [Mpsi]",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "d8700af40d7fbf22",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Area boquilla (in)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "339ec95935cf7ee7",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 1",
+        "func": "msg.payload=msg.payload/25.4\nflow.set(\"D_espira\",msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 180,
+        "wires": [
+            [
+                "f8654d14b6d6374c"
+            ]
+        ]
+    },
+    {
+        "id": "f9659620c6d7b24d",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 2",
+        "func": "msg.payload=msg.payload/25.4\nflow.set(\"D_exterior\",msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 220,
+        "wires": [
+            [
+                "86266820fde506d9"
+            ]
+        ]
+    },
+    {
+        "id": "6e1e9862400e9cdc",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 3",
+        "func": "var msg1 = { payload: 0 }\nvar msg2 = { payload: 0 }\nvar msg3 = { payload: 0 }\n\nmsg1.payload = msg.payload / 25.4\nmsg2.payload = msg1.payload / 2\nmsg3.payload = Math.pow(msg2.payload, 2) * Math.PI\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 360,
+        "wires": [
+            [
+                "c19bf4a8073f5583"
+            ],
+            [
+                "1793fa6234bd2c8d"
+            ],
+            [
+                "d8700af40d7fbf22"
+            ]
+        ]
+    },
+    {
+        "id": "c19bf4a8073f5583",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Diametro boq (in)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1793fa6234bd2c8d",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Radio boquilla (in)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7d3c975342dd7c57",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "K Resorte 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 830,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "16aaff28b758dcaa",
+        "type": "ui_text",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "f6603a94ad0a668e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "K Resorte 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 830,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "c36dfc6554aea7ba",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 4",
+        "func": "var G_material = flow.get('G_material')\nvar D_espira = flow.get('D_espira')\nvar D_exterior = flow.get('D_exterior')\nvar Na = flow.get('Na')\nvar var1 = Math.pow(D_espira, 4) * G_material\nvar var2 = Math.pow(D_exterior, 3) * Na * 8\nvar msg1 = { payload: 0 }\nvar msg2 = { payload: 0 }\n\nmsg1.payload = var1 / var2\nmsg2.payload = msg1.payload * 1000\nreturn [msg1, msg2];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 460,
+        "wires": [
+            [
+                "7d3c975342dd7c57"
+            ],
+            [
+                "16aaff28b758dcaa"
+            ]
+        ]
+    },
+    {
+        "id": "2b9bcc684c202527",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 5",
+        "func": "flow.set(\"G_material\",msg.payload)\nmsg.payload=msg.payload/1000\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "ce390bfb91dadf76"
+            ]
+        ]
+    },
+    {
+        "id": "5ea9b80ab7aaa5d1",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Na",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73ac451f7b29c2d8",
+        "type": "inject",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 460,
+        "wires": [
+            [
+                "c36dfc6554aea7ba"
+            ]
+        ]
     },
     {
         "id": "097009c2040bbe7f",
