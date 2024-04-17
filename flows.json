@@ -785,5 +785,31 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "3b6a577258e31784",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "import pandas as pd  # type: ignore\nfrom pulp import *  # type: ignore\n\nset_pressure = 300\ndeflexion_disp = 60\nD_exterior_in = 1.968503937007874\nG_kpsi = 11600\nNa = 7\nD_boquilla_in = 1.5748031496062993\nR_boquilla_in = 0.7874015748031497\nA_boquilla_in = 1.9477913408083534\n\n\n# Problema de programación lineal\nprob = LpProblem(\"test_de_optimizacion\", LpMinimize)\n\n# Variables\nD_espira_in = pulp.LpVariable(\"D_espira_in\", 0, 20, LpInteger)\npressure = pulp.LpVariable(\"pressure\")\nfmax = pulp.LpVariable(\"fmax\", cat='Continuous')\nK_2 = pulp.LpVariable(\"K_2\", cat=\"Continuous\")\nporc_desfl = pulp.LpVariable(\"porc_desfl\", 0.25, 0.95)\ndefl_in = pulp.LpVariable(\"defl_in\", cat=\"Continuous\")\n\n# Objetivo\nprob += pressure - set_pressure, \"obj\"\n\n# Restricciones\nprob += pressure >= set_pressure, \"c0\"\nprob += pressure * A_boquilla_in == fmax, \"c1\"\nprob += fmax == lpDot([defl_in],[K_2]), \"c2\"\n# prob += K_2 == D_espira_in * D_espira_in * D_espira_in * D_espira_in / pow(D_exterior_in, 3) * G_kpsi * Na * 8, \"c3\"\n# prob += defl_in == porc_desfl * deflexion_disp / 25.4, \"c4\"\n\nprob.solve()\n# Impresión de los valores de las variables óptimas\nfor v in prob.variables():\n    print(v.name, \"=\", v.varValue)\n\n# Valor objetivo\nprint(\"objective=\", value(prob.objective))\n",
+        "outputs": 1,
+        "x": 450,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "11f7977a1bd578d4",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "import pandas as pd  # type: ignore\nfrom pulp import *  # type: ignore\n\ndeflexion_disp = 60\nset_pressure = 300  # msg['payload']['set_pressure']\nD_espira_in = 0.3937007874015748\nD_exterior_in = 1.968503937007874\nG_kpsi = 11600\nNa = 7\nD_boquilla_in = 1.5748031496062993\nR_boquilla_in = 0.7874015748031497\nA_boquilla_in = 1.9477913408083534\n\nvar1 = pow(D_espira_in, 4) * G_kpsi\nvar2 = pow(D_exterior_in, 3) * Na * 8\n\nK_1 = var1 / var2\nK_2 = K_1 * 1000\n\n\ntable = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\ntable = pd.DataFrame(data=table)\n\ntable[\"desflexion_mm\"] = table[\"porc_deflexion\"] * deflexion_disp\ntable[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\ntable[\"fmax\"] = table[\"desflexion_in\"] * K_2\ntable[\"pmax\"] = table[\"fmax\"] / 2\n\n\nprint(table)\n",
+        "outputs": 1,
+        "x": 810,
+        "y": 720,
+        "wires": [
+            []
+        ]
     }
 ]
