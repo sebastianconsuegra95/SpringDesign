@@ -21,14 +21,13 @@
             "741c254551d25eaa",
             "71b3fea8f5cfa766",
             "1e7b1c0c85ee8581",
-            "14ee70aaa981fe68",
             "847ba2ae7bb5c2d8",
             "f45716bacfc54c28"
         ],
-        "x": 114,
-        "y": 139,
-        "w": 312,
-        "h": 382
+        "x": 14,
+        "y": 19,
+        "w": 352,
+        "h": 322
     },
     {
         "id": "b2946fec93a18c24",
@@ -40,15 +39,12 @@
         },
         "nodes": [
             "f8654d14b6d6374c",
-            "86266820fde506d9",
-            "ce390bfb91dadf76",
-            "7d3c975342dd7c57",
-            "16aaff28b758dcaa"
+            "c2914cabde621045"
         ],
         "x": 774,
-        "y": 139,
-        "w": 292,
-        "h": 382
+        "y": 119,
+        "w": 252,
+        "h": 182
     },
     {
         "id": "69b8262d1a3bba40",
@@ -184,7 +180,7 @@
         "tab": "69b8262d1a3bba40",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": "18",
         "collapse": false,
         "className": ""
     },
@@ -193,7 +189,7 @@
         "type": "ui_text_input",
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
-        "name": "Diametro espira (D_espira)",
+        "name": "Diametro espira (D_espira_mm)",
         "label": "Diametro espira [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
@@ -207,11 +203,11 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 280,
-        "y": 180,
+        "x": 210,
+        "y": 60,
         "wires": [
             [
-                "339ec95935cf7ee7"
+                "5a23b820fec2d15c"
             ]
         ]
     },
@@ -220,7 +216,7 @@
         "type": "ui_text_input",
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
-        "name": "Diametro exterior (D_exterior)",
+        "name": "Diametro exterior (D_exterior_mm)",
         "label": "Diametro exterior [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
@@ -234,11 +230,11 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 270,
-        "y": 220,
+        "x": 200,
+        "y": 100,
         "wires": [
             [
-                "f9659620c6d7b24d"
+                "734bbd609d344e3a"
             ]
         ]
     },
@@ -247,7 +243,7 @@
         "type": "ui_text_input",
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
-        "name": "Modulo de Cortante (G)",
+        "name": "Modulo de Cortante (G_kpsi)",
         "label": "Modulo de Cortante [kpsi]",
         "tooltip": "kpsi",
         "group": "fceac92883eed5ce",
@@ -261,8 +257,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 290,
-        "y": 260,
+        "x": 220,
+        "y": 140,
         "wires": [
             [
                 "e64e4f23fb11ceaa"
@@ -288,8 +284,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 280,
-        "y": 300,
+        "x": 220,
+        "y": 180,
         "wires": [
             [
                 "5ea9b80ab7aaa5d1"
@@ -301,7 +297,7 @@
         "type": "ui_text_input",
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
-        "name": "Diametro Boquilla (D_boquilla)",
+        "name": "Diametro Boquilla (D_boquilla_mm)",
         "label": "Diametro Boquilla [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
@@ -315,11 +311,11 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 270,
-        "y": 340,
+        "x": 200,
+        "y": 220,
         "wires": [
             [
-                "6e1e9862400e9cdc"
+                "3c16a779330c72c0"
             ]
         ]
     },
@@ -333,29 +329,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Diametro espira [in]",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 890,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "86266820fde506d9",
-        "type": "ui_text",
-        "z": "6705bbb95f3252fd",
-        "g": "b2946fec93a18c24",
-        "group": "f6603a94ad0a668e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Diametro exterior [in]",
+        "label": "Diametro espira [mm]",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -364,137 +338,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 900,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "ce390bfb91dadf76",
-        "type": "ui_text",
-        "z": "6705bbb95f3252fd",
-        "g": "b2946fec93a18c24",
-        "group": "f6603a94ad0a668e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Modulo de Cortante [Mpsi]",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 920,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "339ec95935cf7ee7",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 1",
-        "func": "msg.payload = msg.payload / 25.4\nflow.set(\"D_espira_in\", msg.payload)\nreturn msg;",
-        "outputs": 0,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "f9659620c6d7b24d",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 2",
-        "func": "msg.payload=msg.payload/25.4\nflow.set(\"D_exterior_in\",msg.payload)\nreturn msg;",
-        "outputs": 0,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "6e1e9862400e9cdc",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 3",
-        "func": "var D_boquilla_in = msg.payload / 25.4\nvar R_boquilla_in = D_boquilla_in / 2\nvar A_boquilla_in2 = Math.pow(R_boquilla_in, 2) * Math.PI\n\nflow.set(\"D_boquilla_in\", D_boquilla_in)\nflow.set(\"R_boquilla_in\", R_boquilla_in)\nflow.set(\"A_boquilla_in2\", A_boquilla_in2)",
-        "outputs": 0,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "7d3c975342dd7c57",
-        "type": "ui_text",
-        "z": "6705bbb95f3252fd",
-        "g": "b2946fec93a18c24",
-        "group": "f6603a94ad0a668e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "K Resorte 1",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 870,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "16aaff28b758dcaa",
-        "type": "ui_text",
-        "z": "6705bbb95f3252fd",
-        "g": "b2946fec93a18c24",
-        "group": "f6603a94ad0a668e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "K Resorte 2",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 870,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "c36dfc6554aea7ba",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 4",
-        "func": "var G_kpsi = flow.get('G_kpsi')\nvar D_espira_in = flow.get('D_espira_in')\nvar D_exterior_in = flow.get('D_exterior_in')\nvar Na = flow.get('Na')\nvar var1 = Math.pow(D_espira_in, 4) * G_kpsi\nvar var2 = Math.pow(D_exterior_in, 3) * Na * 8\nvar K_1 = var1 / var2\nvar K_2 = K_1 * 1000\nflow.set('K_1', K_1)\nflow.set('K_2', K_2)",
-        "outputs": 0,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 480,
+        "y": 160,
         "wires": []
     },
     {
@@ -516,8 +360,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 610,
-        "y": 300,
+        "x": 470,
+        "y": 180,
         "wires": [
             []
         ]
@@ -542,38 +386,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 570,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "14ee70aaa981fe68",
-        "type": "ui_button",
-        "z": "6705bbb95f3252fd",
-        "g": "289a27507fb48f90",
-        "name": "",
-        "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Calculate K Resortes",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 300,
-        "y": 480,
+        "x": 110,
+        "y": 440,
         "wires": [
             [
-                "c36dfc6554aea7ba"
+                "ba5818ab88fc5251"
             ]
         ]
     },
@@ -596,17 +413,435 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 480,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4da9cd22d77ad07d",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "from math import pi\nfrom scipy.optimize import minimize\nimport numpy as np\n\n# Set_pressure =  800\n# Defl_disp = 60\n# D_exterior_in = 1.968503937007874\n# G_kpsi = 11600\n# Na = 7\n# D_boquilla_in = 1.5748031496062993\n# R_boquilla_in = 0.7874015748031497\n# A_boquilla_in = 1.9477913408083534\n\n# Input Variables\nSet_pressure = msg[\"payload\"][\"Set_pressure\"]\nD_espira_mm_initial = msg[\"payload\"][\"D_espira_mm\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nEsp_espiras = msg[\"payload\"][\"Esp_espiras\"]\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\n#Defl_disp = Esp_espiras * Na\n\nprint(A_boquilla_in)\n\n\n# Definir la función objetivo\ndef objective_function(x):\n    D_espira_mm = x[0]\n    Porc_defl = x[1]\n    #node.log(D_espira_mm)\n    Defl_disp = Esp_espiras * Na - (D_espira_mm-D_espira_mm_initial)\n    print(Defl_disp)\n    return abs(((Porc_defl * Defl_disp / 25.4) * (((pow(D_espira_mm / 25.4, 4) * G_kpsi) / (pow(D_exterior_in, 3) * Na * 8)) * 1000)) / A_boquilla_in - Set_pressure)\n\n# Especificar el punto inicial de la optimización\ninitial_guess = [D_espira_mm_initial, 0.5]\nbounds = [(0, 20), (0.25, 0.95)]\n\n# Llamar a la función de minimización con restricciones\nresult = minimize(objective_function, initial_guess, bounds=bounds)\n\n# Imprimir los resultados\nprint(\"Resultado de la optimización con restricciones:\")\nprint(\"Valor de x que minimiza la función:\", result.x)\nprint(\"Valor mínimo de la función:\", result.fun)\n\nmsg['payload']=[result.x[0], result.x[1]]\nreturn msg\n\n#agregar restriccion de que no supere 0.5 en porc_defl\n# ecuación del defl = espacio_entre_espiras * Na - delta(d)\n# delta(d) = d_i-d_actual",
+        "outputs": 1,
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "091836aadbe18eae",
+                "8eea1c14407e3ea7"
+            ]
+        ]
+    },
+    {
+        "id": "ba5818ab88fc5251",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 5",
+        "func": "msg.payload = {}\nvar keys = flow.keys()\nfor (let i = 0; i < keys.length; i++) {\n    msg.payload[keys[i]] = flow.get(keys[i])\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 440,
+        "wires": [
+            [
+                "4da9cd22d77ad07d"
+            ]
+        ]
+    },
+    {
+        "id": "847ba2ae7bb5c2d8",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "Espacio entre Espiras (Esp_espiras)",
+        "label": "Espacio entre Espiras",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "c1286f81de88e08a"
+            ]
+        ]
+    },
+    {
+        "id": "c1286f81de88e08a",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Esp_espiras",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
         "y": 260,
         "wires": [
             []
         ]
     },
     {
-        "id": "bd11c10e09facedf",
+        "id": "f45716bacfc54c28",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "Set Pressure (Set_pressure)",
+        "label": "Set Pressure",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "6f55b443bc03bd51"
+            ]
+        ]
+    },
+    {
+        "id": "6f55b443bc03bd51",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Set_pressure",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a23b820fec2d15c",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "D_espira_mm",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "734bbd609d344e3a",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "D_exterior_mm",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c16a779330c72c0",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "D_boquilla_mm",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "091836aadbe18eae",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "D_espira_mm_op",
+                "pt": "flow",
+                "to": "payload[0]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "Porc_defl_op",
+                "pt": "flow",
+                "to": "payload[1]",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "D_espira_mm_op_round",
+                "pt": "flow",
+                "to": "$round(payload[0], 1)\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "D_espira_mm_op_round",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 440,
+        "wires": [
+            [
+                "63a0d74d03ea34a9",
+                "ec55d3411ec798f8"
+            ]
+        ]
+    },
+    {
+        "id": "ec55d3411ec798f8",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 6",
+        "func": "msg.payload = {}\nvar keys = flow.keys()\nfor (let i = 0; i < keys.length; i++) {\n    msg.payload[keys[i]] = flow.get(keys[i])\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "5d56bb13035c3151"
+            ]
+        ]
+    },
+    {
+        "id": "5d56bb13035c3151",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "from math import pi\nimport numpy as np\nimport pandas as pd  # type: ignore\n\n# deflexion_disp = 60\n# set_pressure = 300  # msg['payload']['set_pressure']\n# D_espira_in = 0.3937007874015748\n# D_exterior_in = 1.968503937007874\n# G_kpsi = 11600\n# Na = 7\n# D_boquilla_in = 1.5748031496062993\n# R_boquilla_in = 0.7874015748031497\n# A_boquilla_in = 1.9477913408083534\n\n# Input Variables\nSet_pressure = msg[\"payload\"][\"Set_pressure\"]\nD_espira_mm_op_round = msg[\"payload\"][\"D_espira_mm_op\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nDefl_act = msg[\"payload\"][\"Defl_act\"]\n\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_espira_in = D_espira_mm_op_round /25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\n\nDefl_disp = 49.07311817075443\n\nvar1 = pow(D_espira_in, 4) * G_kpsi\nvar2 = pow(D_exterior_in, 3) * Na * 8\n\nK_1 = var1 / var2\nK_2 = K_1 * 1000\n\n\ntable = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\ntable = pd.DataFrame(data=table)\n\ntable[\"desflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\ntable[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\ntable[\"fmax\"] = table[\"desflexion_in\"] * K_2\ntable[\"pmax\"] = table[\"fmax\"] / 2\n\n\nprint(table)\nmsg['payload']=table.to_json(orient=\"records\")\n\nreturn msg\n",
+        "outputs": 1,
+        "x": 410,
+        "y": 500,
+        "wires": [
+            [
+                "a53c5af1687651e4"
+            ]
+        ]
+    },
+    {
+        "id": "a53c5af1687651e4",
+        "type": "json",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "b940068493f0ec19",
+                "a7312d9bdce24f0c"
+            ]
+        ]
+    },
+    {
+        "id": "b940068493f0ec19",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "table",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2914cabde621045",
+        "type": "ui_table",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "a737e2ff842c331d",
+        "name": "",
+        "order": 1,
+        "width": "18",
+        "height": "4",
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 850,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "63a0d74d03ea34a9",
+        "type": "link out",
+        "z": "6705bbb95f3252fd",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "21a75caf50d9b495",
+            "a8b59f73da29647a",
+            "34bf33c2aead8b29"
+        ],
+        "x": 735,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "21a75caf50d9b495",
+        "type": "link in",
+        "z": "6705bbb95f3252fd",
+        "name": "link in 1",
+        "links": [
+            "63a0d74d03ea34a9"
+        ],
+        "x": 735,
+        "y": 160,
+        "wires": [
+            [
+                "f8654d14b6d6374c"
+            ]
+        ]
+    },
+    {
+        "id": "a7312d9bdce24f0c",
+        "type": "link out",
+        "z": "6705bbb95f3252fd",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "c352ba731f60898e"
+        ],
+        "x": 675,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c352ba731f60898e",
+        "type": "link in",
+        "z": "6705bbb95f3252fd",
+        "name": "link in 2",
+        "links": [
+            "a7312d9bdce24f0c"
+        ],
+        "x": 735,
+        "y": 260,
+        "wires": [
+            [
+                "c2914cabde621045"
+            ]
+        ]
+    },
+    {
+        "id": "a2e2bb8dcb0d7ec4",
         "type": "inject",
         "z": "6705bbb95f3252fd",
-        "name": "Input Table",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -623,8 +858,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 240,
-        "y": 600,
+        "x": 100,
+        "y": 400,
         "wires": [
             [
                 "ba5818ab88fc5251"
@@ -632,22 +867,7 @@
         ]
     },
     {
-        "id": "4da9cd22d77ad07d",
-        "type": "python3-function",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "func": "import pandas as pd\n\n \nreturn msg",
-        "outputs": 1,
-        "x": 550,
-        "y": 600,
-        "wires": [
-            [
-                "c08111261a16cedd"
-            ]
-        ]
-    },
-    {
-        "id": "c08111261a16cedd",
+        "id": "8eea1c14407e3ea7",
         "type": "debug",
         "z": "6705bbb95f3252fd",
         "name": "debug 1",
@@ -658,158 +878,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
-        "y": 600,
+        "x": 610,
+        "y": 360,
         "wires": []
-    },
-    {
-        "id": "ba5818ab88fc5251",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 5",
-        "func": "msg.payload = {}\nvar keys = flow.keys()\nfor (let i = 0; i < keys.length; i++) {\n    msg.payload[keys[i]] = flow.get(keys[i])\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 600,
-        "wires": [
-            [
-                "4da9cd22d77ad07d"
-            ]
-        ]
-    },
-    {
-        "id": "847ba2ae7bb5c2d8",
-        "type": "ui_text_input",
-        "z": "6705bbb95f3252fd",
-        "g": "289a27507fb48f90",
-        "name": "Deflexión Activa (Def_act)",
-        "label": "Deflexión Activa",
-        "tooltip": "",
-        "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 290,
-        "y": 380,
-        "wires": [
-            [
-                "c1286f81de88e08a"
-            ]
-        ]
-    },
-    {
-        "id": "c1286f81de88e08a",
-        "type": "change",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "Def_act",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f45716bacfc54c28",
-        "type": "ui_text_input",
-        "z": "6705bbb95f3252fd",
-        "g": "289a27507fb48f90",
-        "name": "Set Pressure (set_pressure)",
-        "label": "Set Pressure",
-        "tooltip": "",
-        "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "number",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 280,
-        "y": 420,
-        "wires": [
-            [
-                "6f55b443bc03bd51"
-            ]
-        ]
-    },
-    {
-        "id": "6f55b443bc03bd51",
-        "type": "change",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "set_pressure",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 640,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3b6a577258e31784",
-        "type": "python3-function",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "func": "import pandas as pd  # type: ignore\nfrom pulp import *  # type: ignore\n\nset_pressure = 300\ndeflexion_disp = 60\nD_exterior_in = 1.968503937007874\nG_kpsi = 11600\nNa = 7\nD_boquilla_in = 1.5748031496062993\nR_boquilla_in = 0.7874015748031497\nA_boquilla_in = 1.9477913408083534\n\n\n# Problema de programación lineal\nprob = LpProblem(\"test_de_optimizacion\", LpMinimize)\n\n# Variables\nD_espira_in = pulp.LpVariable(\"D_espira_in\", 0, 20, LpInteger)\npressure = pulp.LpVariable(\"pressure\")\nfmax = pulp.LpVariable(\"fmax\", cat='Continuous')\nK_2 = pulp.LpVariable(\"K_2\", cat=\"Continuous\")\nporc_desfl = pulp.LpVariable(\"porc_desfl\", 0.25, 0.95)\ndefl_in = pulp.LpVariable(\"defl_in\", cat=\"Continuous\")\n\n# Objetivo\nprob += pressure - set_pressure, \"obj\"\n\n# Restricciones\nprob += pressure >= set_pressure, \"c0\"\nprob += pressure * A_boquilla_in == fmax, \"c1\"\nprob += fmax == lpDot([defl_in],[K_2]), \"c2\"\n# prob += K_2 == D_espira_in * D_espira_in * D_espira_in * D_espira_in / pow(D_exterior_in, 3) * G_kpsi * Na * 8, \"c3\"\n# prob += defl_in == porc_desfl * deflexion_disp / 25.4, \"c4\"\n\nprob.solve()\n# Impresión de los valores de las variables óptimas\nfor v in prob.variables():\n    print(v.name, \"=\", v.varValue)\n\n# Valor objetivo\nprint(\"objective=\", value(prob.objective))\n",
-        "outputs": 1,
-        "x": 450,
-        "y": 720,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "11f7977a1bd578d4",
-        "type": "python3-function",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "func": "import pandas as pd  # type: ignore\nfrom pulp import *  # type: ignore\n\ndeflexion_disp = 60\nset_pressure = 300  # msg['payload']['set_pressure']\nD_espira_in = 0.3937007874015748\nD_exterior_in = 1.968503937007874\nG_kpsi = 11600\nNa = 7\nD_boquilla_in = 1.5748031496062993\nR_boquilla_in = 0.7874015748031497\nA_boquilla_in = 1.9477913408083534\n\nvar1 = pow(D_espira_in, 4) * G_kpsi\nvar2 = pow(D_exterior_in, 3) * Na * 8\n\nK_1 = var1 / var2\nK_2 = K_1 * 1000\n\n\ntable = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\ntable = pd.DataFrame(data=table)\n\ntable[\"desflexion_mm\"] = table[\"porc_deflexion\"] * deflexion_disp\ntable[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\ntable[\"fmax\"] = table[\"desflexion_in\"] * K_2\ntable[\"pmax\"] = table[\"fmax\"] / 2\n\n\nprint(table)\n",
-        "outputs": 1,
-        "x": 810,
-        "y": 720,
-        "wires": [
-            []
-        ]
     }
 ]
