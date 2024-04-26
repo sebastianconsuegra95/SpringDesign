@@ -881,5 +881,18 @@
         "x": 610,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "209e6109096bce1c",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "from math import inf, pi\nimport pandas as pd\nimport numpy as np\n\n# Input Variables\nSet_pressure = 44\nD_boquilla_mm = 33.7\nG_kpsi = 11600\nNa = 7\nD_exterior_mm = 60\nEsp_espiras = 11\nD_espira_mm = 1\nActual_pressure = 20\n\n# Input Variables\n# Set_pressure = msg[\"payload\"][\"Set_pressure\"]\n# D_espira_mm_initial = msg[\"payload\"][\"D_espira_mm\"]\n# D_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\n# G_kpsi = msg[\"payload\"][\"G_kpsi\"]\n# Na = msg[\"payload\"][\"Na\"]\n# D_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\n# Esp_espiras = msg[\"payload\"][\"Esp_espiras\"]\n\n# Constant Variables\nporc_defl = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\nDefl_disp = Esp_espiras * Na\n\n\ndef findPressure(D_espira_mm, Defl_disp):  # type: ignore\n    D_espira_in = D_espira_mm / 25.4\n    var1 = pow(D_espira_in, 4) * G_kpsi\n    var2 = pow(D_exterior_in, 3) * Na * 8\n    K_1 = var1 / var2\n    K_2 = K_1 * 1000\n\n    table = pd.DataFrame(data=porc_defl)\n    table[\"desflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\n    table[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\n    table[\"fmax\"] = table[\"desflexion_in\"] * K_2\n    table[\"pmax\"] = table[\"fmax\"] / A_boquilla_in\n\n    return table\n\n\nDefl_disp_itera = Defl_disp\nD_espira_mm_itera = D_espira_mm\nmin_pressure = inf\nmid_pressure = -inf\n\ntable_ite = pd.DataFrame(\n    columns=(\"D_espira_mm\", \"Defl_disp\", \"min_pressure\", \"mid_pressure\", \"max_pressure\")\n)\n\nif Set_pressure > Actual_pressure:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 15, 0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp - delta\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        min_pressure = table.iloc[0][\"pmax\"]\n        mid_pressure = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        max_pressure = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"min_pressure\": min_pressure,\n            \"mid_pressure\": mid_pressure,\n            \"max_pressure\": max_pressure,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if min_pressure < Set_pressure < mid_pressure:\n            break\n        pass\n    pass\nelse:\n\n    pass\n\nprint(table)\nprint(table_ite)\n\n\n# agregar restriccion de que no supere 0.5 en porc_defl\n# ecuación del defl = espacio_entre_espiras * Na - delta(d)\n# delta(d) = d_i-d_actual\n",
+        "outputs": 1,
+        "x": 620,
+        "y": 620,
+        "wires": [
+            []
+        ]
     }
 ]
