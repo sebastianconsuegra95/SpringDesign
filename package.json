@@ -2,7 +2,10 @@
     "name": "SpringDesign",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-python3-function": "0.0.4",
+        "node-red-dashboard": "3.6.5"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
