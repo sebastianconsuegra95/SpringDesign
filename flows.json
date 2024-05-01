@@ -11,7 +11,7 @@
         "id": "289a27507fb48f90",
         "type": "group",
         "z": "6705bbb95f3252fd",
-        "name": "Input",
+        "name": "Input 1",
         "style": {
             "label": true
         },
@@ -22,12 +22,14 @@
             "71b3fea8f5cfa766",
             "1e7b1c0c85ee8581",
             "847ba2ae7bb5c2d8",
-            "f45716bacfc54c28"
+            "f45716bacfc54c28",
+            "344b951451636228",
+            "e943a07039dc74dd"
         ],
         "x": 14,
         "y": 19,
         "w": 352,
-        "h": 322
+        "h": 402
     },
     {
         "id": "b2946fec93a18c24",
@@ -38,13 +40,31 @@
             "label": true
         },
         "nodes": [
-            "f8654d14b6d6374c",
-            "c2914cabde621045"
+            "c2914cabde621045",
+            "63ebe27d5bde5976",
+            "2e2cca32b5ab933e"
         ],
-        "x": 774,
-        "y": 119,
-        "w": 252,
-        "h": 182
+        "x": 834,
+        "y": 59,
+        "w": 172,
+        "h": 162
+    },
+    {
+        "id": "2e3945cfdd1c4924",
+        "type": "group",
+        "z": "6705bbb95f3252fd",
+        "name": "Input 2",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9d7cb709513de607",
+            "27b6b2b53dfce8e6"
+        ],
+        "x": 734,
+        "y": 279,
+        "w": 312,
+        "h": 122
     },
     {
         "id": "69b8262d1a3bba40",
@@ -154,35 +174,55 @@
     {
         "id": "fceac92883eed5ce",
         "type": "ui_group",
-        "name": "Input",
+        "name": "Cálculo de Diametro Espira Optimo",
         "tab": "69b8262d1a3bba40",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": "24",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "f6603a94ad0a668e",
+        "id": "5d78ae2962e2e55f",
         "type": "ui_group",
-        "name": "Output",
-        "tab": "69b8262d1a3bba40",
-        "order": 2,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "a737e2ff842c331d",
-        "type": "ui_group",
-        "name": "Function",
+        "name": "Cálculo Tabla por Diametro Espira y Deflexión Disponible",
         "tab": "69b8262d1a3bba40",
         "order": 3,
         "disp": true,
-        "width": "18",
+        "width": "24",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "ad0968efaffcb90c",
+        "type": "ui_group",
+        "name": "Template",
+        "tab": "69b8262d1a3bba40",
+        "order": 4,
+        "disp": false,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "41fd1927dae5c3a7",
+        "type": "ui_spacer",
+        "z": "6705bbb95f3252fd",
+        "name": "spacer",
+        "group": "fceac92883eed5ce",
+        "order": 11,
+        "width": 24,
+        "height": 1
+    },
+    {
+        "id": "3a5c96adc7f30a83",
+        "type": "ui_spacer",
+        "z": "6705bbb95f3252fd",
+        "name": "spacer",
+        "group": "ad0968efaffcb90c",
+        "order": 2,
+        "width": 22,
+        "height": 1
     },
     {
         "id": "c2f5c11bd2d0da4d",
@@ -190,18 +230,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Diametro espira (D_espira_mm)",
-        "label": "Diametro espira [mm]",
+        "label": "<font size=4>Diametro espira [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 1,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 210,
         "y": 60,
@@ -217,18 +257,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Diametro exterior (D_exterior_mm)",
-        "label": "Diametro exterior [mm]",
+        "label": "<font size=4>Diametro exterior [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 2,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 200,
         "y": 100,
@@ -244,18 +284,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Modulo de Cortante (G_kpsi)",
-        "label": "Modulo de Cortante [kpsi]",
+        "label": "<font size=4>Modulo de Cortante [kpsi]",
         "tooltip": "kpsi",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 4,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 220,
         "y": 140,
@@ -271,18 +311,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Número Espiras Activas (Na)",
-        "label": "Número Espiras Activas",
+        "label": "<font size=4>Número Espiras Activas",
         "tooltip": "",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 7,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 220,
         "y": 180,
@@ -298,18 +338,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Diametro Boquilla (D_boquilla_mm)",
-        "label": "Diametro Boquilla [mm]",
+        "label": "<font size=4>Diametro Boquilla [mm]",
         "tooltip": "mm",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 3,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 200,
         "y": 220,
@@ -318,28 +358,6 @@
                 "3c16a779330c72c0"
             ]
         ]
-    },
-    {
-        "id": "f8654d14b6d6374c",
-        "type": "ui_text",
-        "z": "6705bbb95f3252fd",
-        "g": "b2946fec93a18c24",
-        "group": "f6603a94ad0a668e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Diametro espira [mm]",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 900,
-        "y": 160,
-        "wires": []
     },
     {
         "id": "5ea9b80ab7aaa5d1",
@@ -371,23 +389,23 @@
         "type": "ui_button",
         "z": "6705bbb95f3252fd",
         "name": "",
-        "group": "a737e2ff842c331d",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "group": "fceac92883eed5ce",
+        "order": 10,
+        "width": 24,
+        "height": 1,
         "passthru": false,
-        "label": "button",
+        "label": "<font size=3> Calcular",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
-        "className": "",
+        "className": "big",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 110,
-        "y": 440,
+        "x": 120,
+        "y": 640,
         "wires": [
             [
                 "ba5818ab88fc5251"
@@ -420,22 +438,6 @@
         ]
     },
     {
-        "id": "4da9cd22d77ad07d",
-        "type": "python3-function",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "func": "from math import pi\nfrom scipy.optimize import minimize\nimport numpy as np\n\n# Set_pressure =  800\n# Defl_disp = 60\n# D_exterior_in = 1.968503937007874\n# G_kpsi = 11600\n# Na = 7\n# D_boquilla_in = 1.5748031496062993\n# R_boquilla_in = 0.7874015748031497\n# A_boquilla_in = 1.9477913408083534\n\n# Input Variables\nSet_pressure = msg[\"payload\"][\"Set_pressure\"]\nD_espira_mm_initial = msg[\"payload\"][\"D_espira_mm\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nEsp_espiras = msg[\"payload\"][\"Esp_espiras\"]\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\n#Defl_disp = Esp_espiras * Na\n\nprint(A_boquilla_in)\n\n\n# Definir la función objetivo\ndef objective_function(x):\n    D_espira_mm = x[0]\n    Porc_defl = x[1]\n    #node.log(D_espira_mm)\n    Defl_disp = Esp_espiras * Na - (D_espira_mm-D_espira_mm_initial)\n    print(Defl_disp)\n    return abs(((Porc_defl * Defl_disp / 25.4) * (((pow(D_espira_mm / 25.4, 4) * G_kpsi) / (pow(D_exterior_in, 3) * Na * 8)) * 1000)) / A_boquilla_in - Set_pressure)\n\n# Especificar el punto inicial de la optimización\ninitial_guess = [D_espira_mm_initial, 0.5]\nbounds = [(0, 20), (0.25, 0.95)]\n\n# Llamar a la función de minimización con restricciones\nresult = minimize(objective_function, initial_guess, bounds=bounds)\n\n# Imprimir los resultados\nprint(\"Resultado de la optimización con restricciones:\")\nprint(\"Valor de x que minimiza la función:\", result.x)\nprint(\"Valor mínimo de la función:\", result.fun)\n\nmsg['payload']=[result.x[0], result.x[1]]\nreturn msg\n\n#agregar restriccion de que no supere 0.5 en porc_defl\n# ecuación del defl = espacio_entre_espiras * Na - delta(d)\n# delta(d) = d_i-d_actual",
-        "outputs": 1,
-        "x": 410,
-        "y": 440,
-        "wires": [
-            [
-                "091836aadbe18eae",
-                "8eea1c14407e3ea7"
-            ]
-        ]
-    },
-    {
         "id": "ba5818ab88fc5251",
         "type": "function",
         "z": "6705bbb95f3252fd",
@@ -447,11 +449,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
-        "y": 440,
+        "x": 300,
+        "y": 640,
         "wires": [
             [
-                "4da9cd22d77ad07d"
+                "5c3be5e49e83f6be"
             ]
         ]
     },
@@ -461,18 +463,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Espacio entre Espiras (Esp_espiras)",
-        "label": "Espacio entre Espiras",
+        "label": "<font size=4>Espacio entre Espiras",
         "tooltip": "",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 190,
         "y": 260,
@@ -513,18 +515,18 @@
         "z": "6705bbb95f3252fd",
         "g": "289a27507fb48f90",
         "name": "Set Pressure (Set_pressure)",
-        "label": "Set Pressure",
+        "label": "<font size=4>Set Pressure",
         "tooltip": "",
         "group": "fceac92883eed5ce",
-        "order": 0,
-        "width": 0,
-        "height": 0,
+        "order": 8,
+        "width": 8,
+        "height": 2,
         "passthru": true,
         "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
-        "className": "",
+        "className": "big",
         "topicType": "msg",
         "x": 220,
         "y": 300,
@@ -635,83 +637,14 @@
         ]
     },
     {
-        "id": "091836aadbe18eae",
-        "type": "change",
-        "z": "6705bbb95f3252fd",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "D_espira_mm_op",
-                "pt": "flow",
-                "to": "payload[0]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "Porc_defl_op",
-                "pt": "flow",
-                "to": "payload[1]",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "D_espira_mm_op_round",
-                "pt": "flow",
-                "to": "$round(payload[0], 1)\t",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "D_espira_mm_op_round",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 620,
-        "y": 440,
-        "wires": [
-            [
-                "63a0d74d03ea34a9",
-                "ec55d3411ec798f8"
-            ]
-        ]
-    },
-    {
-        "id": "ec55d3411ec798f8",
-        "type": "function",
-        "z": "6705bbb95f3252fd",
-        "name": "function 6",
-        "func": "msg.payload = {}\nvar keys = flow.keys()\nfor (let i = 0; i < keys.length; i++) {\n    msg.payload[keys[i]] = flow.get(keys[i])\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 240,
-        "y": 500,
-        "wires": [
-            [
-                "5d56bb13035c3151"
-            ]
-        ]
-    },
-    {
         "id": "5d56bb13035c3151",
         "type": "python3-function",
         "z": "6705bbb95f3252fd",
         "name": "",
-        "func": "from math import pi\nimport numpy as np\nimport pandas as pd  # type: ignore\n\n# deflexion_disp = 60\n# set_pressure = 300  # msg['payload']['set_pressure']\n# D_espira_in = 0.3937007874015748\n# D_exterior_in = 1.968503937007874\n# G_kpsi = 11600\n# Na = 7\n# D_boquilla_in = 1.5748031496062993\n# R_boquilla_in = 0.7874015748031497\n# A_boquilla_in = 1.9477913408083534\n\n# Input Variables\nSet_pressure = msg[\"payload\"][\"Set_pressure\"]\nD_espira_mm_op_round = msg[\"payload\"][\"D_espira_mm_op\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nDefl_act = msg[\"payload\"][\"Defl_act\"]\n\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_espira_in = D_espira_mm_op_round /25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\n\nDefl_disp = 49.07311817075443\n\nvar1 = pow(D_espira_in, 4) * G_kpsi\nvar2 = pow(D_exterior_in, 3) * Na * 8\n\nK_1 = var1 / var2\nK_2 = K_1 * 1000\n\n\ntable = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\ntable = pd.DataFrame(data=table)\n\ntable[\"desflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\ntable[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\ntable[\"fmax\"] = table[\"desflexion_in\"] * K_2\ntable[\"pmax\"] = table[\"fmax\"] / 2\n\n\nprint(table)\nmsg['payload']=table.to_json(orient=\"records\")\n\nreturn msg\n",
+        "func": "from math import inf, pi\nimport pandas as pd\nimport numpy as np\n\n# Input Variables\n# Set_pressure = 150  # +3%\n# D_boquilla_mm = 16.3\n# G_kpsi = 11600\n# Na = 6\n# D_exterior_mm = 24\n# Esp_espiras = 4.5\n# D_espira_mm = 3\n# Actual_pressure = 75\n# ASME_Code = \"I\"  # I or VIII\n\n# Input Variables\nD_espira_mm = msg[\"payload\"][\"D_espira_mm_fin\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nDefl_disp = msg[\"payload\"][\"Defl_disp_fin\"]\n\n# Constant Variables\nporc_defl = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\n\n# Pre-process Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\n\n\ndef findPressure(D_espira_mm, Defl_disp):\n    D_espira_in = D_espira_mm / 25.4\n    var1 = pow(D_espira_in, 4) * G_kpsi\n    var2 = pow(D_exterior_in, 3) * Na * 8\n    K_1 = var1 / var2\n    K_2 = K_1 * 1000\n\n    table = pd.DataFrame(data=porc_defl)\n    table[\"deflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\n    table[\"deflexion_in\"] = table[\"deflexion_mm\"] / 25.4\n    table[\"fmax\"] = table[\"deflexion_in\"] * K_2\n    table[\"pmax\"] = table[\"fmax\"] / A_boquilla_in\n\n    return table\n\n\ntable = findPressure(D_espira_mm, Defl_disp)\n\n\nprint(table)\nout = {\"payload\": table.to_json(orient=\"records\")}\nreturn out\n",
         "outputs": 1,
-        "x": 410,
-        "y": 500,
+        "x": 470,
+        "y": 740,
         "wires": [
             [
                 "a53c5af1687651e4"
@@ -726,12 +659,13 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 590,
-        "y": 500,
+        "x": 630,
+        "y": 740,
         "wires": [
             [
                 "b940068493f0ec19",
-                "a7312d9bdce24f0c"
+                "2709714c4bf929f9",
+                "ceec2581ae5fd68f"
             ]
         ]
     },
@@ -754,8 +688,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 750,
-        "y": 500,
+        "x": 770,
+        "y": 780,
         "wires": [
             []
         ]
@@ -765,48 +699,68 @@
         "type": "ui_table",
         "z": "6705bbb95f3252fd",
         "g": "b2946fec93a18c24",
-        "group": "a737e2ff842c331d",
-        "name": "",
-        "order": 1,
-        "width": "18",
-        "height": "4",
-        "columns": [],
+        "group": "fceac92883eed5ce",
+        "name": "Tabla 1",
+        "order": 12,
+        "width": 24,
+        "height": 3,
+        "columns": [
+            {
+                "field": "D_espira_mm",
+                "title": "Diametro Espira [mm]",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "Defl_disp",
+                "title": "Deflexión Disponible",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "pressure_25porc",
+                "title": "Presión al 25%",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "pressure_50porc",
+                "title": "Presión al 50%",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "pressure_95porc",
+                "title": "Presión al 95%",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
         "outputs": 0,
         "cts": false,
-        "x": 850,
-        "y": 260,
+        "x": 920,
+        "y": 100,
         "wires": []
-    },
-    {
-        "id": "63a0d74d03ea34a9",
-        "type": "link out",
-        "z": "6705bbb95f3252fd",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [
-            "21a75caf50d9b495",
-            "a8b59f73da29647a",
-            "34bf33c2aead8b29"
-        ],
-        "x": 735,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "21a75caf50d9b495",
-        "type": "link in",
-        "z": "6705bbb95f3252fd",
-        "name": "link in 1",
-        "links": [
-            "63a0d74d03ea34a9"
-        ],
-        "x": 735,
-        "y": 160,
-        "wires": [
-            [
-                "f8654d14b6d6374c"
-            ]
-        ]
     },
     {
         "id": "a7312d9bdce24f0c",
@@ -815,10 +769,11 @@
         "name": "link out 2",
         "mode": "link",
         "links": [
-            "c352ba731f60898e"
+            "c352ba731f60898e",
+            "f0ea17d5b91741e9"
         ],
-        "x": 675,
-        "y": 540,
+        "x": 715,
+        "y": 620,
         "wires": []
     },
     {
@@ -829,8 +784,8 @@
         "links": [
             "a7312d9bdce24f0c"
         ],
-        "x": 735,
-        "y": 260,
+        "x": 795,
+        "y": 100,
         "wires": [
             [
                 "c2914cabde621045"
@@ -858,8 +813,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 400,
+        "x": 160,
+        "y": 600,
         "wires": [
             [
                 "ba5818ab88fc5251"
@@ -867,7 +822,525 @@
         ]
     },
     {
-        "id": "8eea1c14407e3ea7",
+        "id": "209e6109096bce1c",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "from math import inf, pi\nimport pandas as pd\nimport numpy as np\n\n# Input Variables\nSet_pressure = 150  # +3%\nD_boquilla_mm = 16.3\nG_kpsi = 11600\nNa = 6\nD_exterior_mm = 24\nEsp_espiras = 4.5\nD_espira_mm = 3\nActual_pressure = 75\nASME_Code = \"I\"  # I or VIII\n\n# Input Variables\n# Set_pressure = msg[\"payload\"][\"Set_pressure\"]\n# D_espira_mm_initial = msg[\"payload\"][\"D_espira_mm\"]\n# D_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\n# G_kpsi = msg[\"payload\"][\"G_kpsi\"]\n# Na = msg[\"payload\"][\"Na\"]\n# D_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\n# Esp_espiras = msg[\"payload\"][\"Esp_espiras\"]\n# Actual_pressure = msg[\"payload\"][\"Actual_pressure\"]\n\n# Constant Variables\nporc_defl = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\n\n# Pre-process Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\nDefl_disp = Esp_espiras * Na\n\nif ASME_Code == \"I\":\n    if Set_pressure <= 70:\n        Set_pressure = Set_pressure + 2  # + 2psi (15kPa)\n    elif 300 >= Set_pressure > 70:\n        Set_pressure = Set_pressure * 1.03  # +3% fo set pressure\n    elif 1000 >= Set_pressure > 300:\n        Set_pressure = Set_pressure + 10  # + 10psi (70kPa)\n    elif Set_pressure > 1000:\n        Set_pressure = Set_pressure * 1.01  # +1% fo set pressure\nelif ASME_Code == \"VIII\":\n    if Set_pressure <= 70:\n        Set_pressure = Set_pressure + 2  # + 2psi (15kPa)\n    elif Set_pressure > 70:\n        Set_pressure = Set_pressure * 1.03  # +3% fo set pressure\n\n\ndef findPressure(D_espira_mm, Defl_disp):\n    D_espira_in = D_espira_mm / 25.4\n    var1 = pow(D_espira_in, 4) * G_kpsi\n    var2 = pow(D_exterior_in, 3) * Na * 8\n    K_1 = var1 / var2\n    K_2 = K_1 * 1000\n\n    table = pd.DataFrame(data=porc_defl)\n    table[\"desflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\n    table[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\n    table[\"fmax\"] = table[\"desflexion_in\"] * K_2\n    table[\"pmax\"] = table[\"fmax\"] / A_boquilla_in\n\n    return table\n\n\n# Initial Variables\nDefl_disp_itera = Defl_disp\nD_espira_mm_itera = D_espira_mm\npressure_25porc = inf\npressure_50porc = -inf\n\ntable_ite = pd.DataFrame(\n    columns=(\n        \"D_espira_mm\",\n        \"Defl_disp\",\n        \"pressure_25porc\",\n        \"pressure_50porc\",\n        \"pressure_95porc\",\n    )\n)\ntable_fin = table_ite\n\nif Set_pressure > Actual_pressure:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 30, 0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp - delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        pressure_25porc = table.iloc[0][\"pmax\"]\n        pressure_50porc = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        pressure_95porc = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"pressure_25porc\": pressure_25porc,\n            \"pressure_50porc\": pressure_50porc,\n            \"pressure_95porc\": pressure_95porc,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if pressure_25porc < Set_pressure < pressure_50porc:\n            table_fin = table_fin._append(row, ignore_index=True)  # type: ignore\n\nelse:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 0, -0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp + delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        pressure_25porc = table.iloc[0][\"pmax\"]\n        pressure_50porc = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        pressure_95porc = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"pressure_25porc\": pressure_25porc,\n            \"pressure_50porc\": pressure_50porc,\n            \"pressure_95porc\": pressure_95porc,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if pressure_25porc < Set_pressure < pressure_50porc:\n            table_fin = table_fin._append(row, ignore_index=True)  # type: ignore\n\nprint(table_fin)\n",
+        "outputs": 1,
+        "x": 1250,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c3be5e49e83f6be",
+        "type": "python3-function",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "func": "from math import inf, pi\nimport pandas as pd\nimport numpy as np\n\n# Input Variables\n#Set_pressure = 150  # +3%\n#D_boquilla_mm = 16.3\n#G_kpsi = 11600\n#Na = 6\n#D_exterior_mm = 24\n#Esp_espiras = 4.5\n#D_espira_mm = 3\n#Actual_pressure = 75\n#ASME_Code = \"I\"  # I or VIII\n\n# Input Variables\nSet_pressure = msg[\"payload\"][\"Set_pressure\"]\nD_espira_mm = msg[\"payload\"][\"D_espira_mm\"]\nD_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\nG_kpsi = msg[\"payload\"][\"G_kpsi\"]\nNa = msg[\"payload\"][\"Na\"]\nD_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\nEsp_espiras = msg[\"payload\"][\"Esp_espiras\"]\nActual_pressure = msg[\"payload\"][\"Actual_pressure\"]\nASME_Code = msg[\"payload\"][\"ASME_Code\"]\n\n# Constant Variables\nporc_defl = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\n\n# Pre-process Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\nDefl_disp = Esp_espiras * Na\n\nif ASME_Code == \"I\":\n    if Set_pressure <= 70:\n        Set_pressure = Set_pressure + 2  # + 2psi (15kPa)\n    elif 300 >= Set_pressure > 70:\n        Set_pressure = Set_pressure * 1.03  # +3% fo set pressure\n    elif 1000 >= Set_pressure > 300:\n        Set_pressure = Set_pressure + 10  # + 10psi (70kPa)\n    elif Set_pressure > 1000:\n        Set_pressure = Set_pressure * 1.01  # +1% fo set pressure\nelif ASME_Code == \"VIII\":\n    if Set_pressure <= 70:\n        Set_pressure = Set_pressure + 2  # + 2psi (15kPa)\n    elif Set_pressure > 70:\n        Set_pressure = Set_pressure * 1.03  # +3% fo set pressure\n\n\ndef findPressure(D_espira_mm, Defl_disp):\n    D_espira_in = D_espira_mm / 25.4\n    var1 = pow(D_espira_in, 4) * G_kpsi\n    var2 = pow(D_exterior_in, 3) * Na * 8\n    K_1 = var1 / var2\n    K_2 = K_1 * 1000\n\n    table = pd.DataFrame(data=porc_defl)\n    table[\"deflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\n    table[\"deflexion_in\"] = table[\"deflexion_mm\"] / 25.4\n    table[\"fmax\"] = table[\"deflexion_in\"] * K_2\n    table[\"pmax\"] = table[\"fmax\"] / A_boquilla_in\n\n    return table\n\n\n# Initial Variables\nDefl_disp_itera = Defl_disp\nD_espira_mm_itera = D_espira_mm\npressure_25porc = inf\npressure_50porc = -inf\n\ntable_ite = pd.DataFrame(\n    columns=(\n        \"D_espira_mm\",\n        \"Defl_disp\",\n        \"pressure_25porc\",\n        \"pressure_50porc\",\n        \"pressure_95porc\",\n    )\n)\ntable_fin = table_ite\n\nif Set_pressure > Actual_pressure:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 30, 0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp - delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        pressure_25porc = table.iloc[0][\"pmax\"]\n        pressure_50porc = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        pressure_95porc = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"pressure_25porc\": pressure_25porc,\n            \"pressure_50porc\": pressure_50porc,\n            \"pressure_95porc\": pressure_95porc,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if pressure_25porc < Set_pressure < pressure_50porc:\n            table_fin = table_fin._append(row, ignore_index=True)  # type: ignore\n\nelse:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 0, -0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp + delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        pressure_25porc = table.iloc[0][\"pmax\"]\n        pressure_50porc = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        pressure_95porc = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"pressure_25porc\": pressure_25porc,\n            \"pressure_50porc\": pressure_50porc,\n            \"pressure_95porc\": pressure_95porc,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if pressure_25porc < Set_pressure < pressure_50porc:\n            table_fin = table_fin._append(row, ignore_index=True)  # type: ignore\n\nprint(table_ite)\n#print(table_fin)\nout1 = {\"payload\":table_fin.to_json(orient=\"records\")}\nout2 = {\"payload\":table_ite.to_json(orient=\"records\")}\nreturn [out1, out2]\n",
+        "outputs": 2,
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "f148f381cdc39acd"
+            ],
+            [
+                "2c859c9db0a7344b"
+            ]
+        ]
+    },
+    {
+        "id": "344b951451636228",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "Actual Pressure (Actual_pressure)",
+        "label": "<font size=4>Actual Pressure",
+        "tooltip": "",
+        "group": "fceac92883eed5ce",
+        "order": 6,
+        "width": 8,
+        "height": 2,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "big",
+        "topicType": "msg",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "7fdeaed9600c5b23"
+            ]
+        ]
+    },
+    {
+        "id": "7fdeaed9600c5b23",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Actual_pressure",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e943a07039dc74dd",
+        "type": "ui_dropdown",
+        "z": "6705bbb95f3252fd",
+        "g": "289a27507fb48f90",
+        "name": "",
+        "label": "ASME Code Section",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "fceac92883eed5ce",
+        "order": 9,
+        "width": 8,
+        "height": 2,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "I",
+                "value": "I",
+                "type": "str"
+            },
+            {
+                "label": "VIII",
+                "value": "VIII",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "big",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "d6a8dbbbe4989139"
+            ]
+        ]
+    },
+    {
+        "id": "d6a8dbbbe4989139",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ASME_Code",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f148f381cdc39acd",
+        "type": "json",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "7ec0fc93830f680c",
+                "a7312d9bdce24f0c",
+                "f10f2db812c4638e"
+            ]
+        ]
+    },
+    {
+        "id": "be57d61cd73ef3f6",
+        "type": "catch",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "scope": [
+            "5c3be5e49e83f6be"
+        ],
+        "uncaught": false,
+        "x": 970,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c859c9db0a7344b",
+        "type": "json",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 630,
+        "y": 660,
+        "wires": [
+            [
+                "d8dbd2a88a0edef0"
+            ]
+        ]
+    },
+    {
+        "id": "7ec0fc93830f680c",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "table_fin",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8dbd2a88a0edef0",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "table_ite",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e2cca32b5ab933e",
+        "type": "ui_template",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "ad0968efaffcb90c",
+        "name": "",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "format": "<style>\n    .big {\n        font-size: 120%;\n    }\n\n    #Setup_Parameters_cards > md-card > .tabulator {\n        font-size: 150%;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 920,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "feea40100d9273a5",
+        "type": "function",
+        "z": "6705bbb95f3252fd",
+        "name": "function 7",
+        "func": "msg.payload = {}\nvar keys = flow.keys()\nfor (let i = 0; i < keys.length; i++) {\n    msg.payload[keys[i]] = flow.get(keys[i])\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 740,
+        "wires": [
+            [
+                "5d56bb13035c3151"
+            ]
+        ]
+    },
+    {
+        "id": "65764ad71429af83",
+        "type": "ui_button",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "group": "5d78ae2962e2e55f",
+        "order": 4,
+        "width": 8,
+        "height": 1,
+        "passthru": false,
+        "label": "<font size=3> Calcular",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "big",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 740,
+        "wires": [
+            [
+                "feea40100d9273a5"
+            ]
+        ]
+    },
+    {
+        "id": "63ebe27d5bde5976",
+        "type": "ui_table",
+        "z": "6705bbb95f3252fd",
+        "g": "b2946fec93a18c24",
+        "group": "5d78ae2962e2e55f",
+        "name": "Tabla 2",
+        "order": 2,
+        "width": 16,
+        "height": 5,
+        "columns": [
+            {
+                "field": "porc_deflexion",
+                "title": "Deflexión [%]",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "deflexion_mm",
+                "title": "Deflexión [mm]",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "deflexion_in",
+                "title": "Deflexión [in]",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "fmax",
+                "title": "Fmax",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "pmax",
+                "title": "Pmax",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 920,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f626f45be2ecacf1",
+        "type": "link in",
+        "z": "6705bbb95f3252fd",
+        "name": "link in 3",
+        "links": [
+            "2709714c4bf929f9"
+        ],
+        "x": 795,
+        "y": 140,
+        "wires": [
+            [
+                "63ebe27d5bde5976"
+            ]
+        ]
+    },
+    {
+        "id": "2709714c4bf929f9",
+        "type": "link out",
+        "z": "6705bbb95f3252fd",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "f0ea17d5b91741e9",
+            "f626f45be2ecacf1"
+        ],
+        "x": 725,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9d7cb709513de607",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "2e3945cfdd1c4924",
+        "name": "Diametro espira (D_espira_mm)",
+        "label": "<font size=4>Diametro espira [mm]",
+        "tooltip": "mm",
+        "group": "5d78ae2962e2e55f",
+        "order": 1,
+        "width": 8,
+        "height": 2,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "D_espira_mm",
+        "sendOnBlur": true,
+        "className": "big",
+        "topicType": "str",
+        "x": 890,
+        "y": 320,
+        "wires": [
+            [
+                "1cce5b92baf82063"
+            ]
+        ]
+    },
+    {
+        "id": "27b6b2b53dfce8e6",
+        "type": "ui_text_input",
+        "z": "6705bbb95f3252fd",
+        "g": "2e3945cfdd1c4924",
+        "name": "Deflexión Disponible (Defl_disp)",
+        "label": "<font size=4>Deflexión Disponible",
+        "tooltip": "mm",
+        "group": "5d78ae2962e2e55f",
+        "order": 3,
+        "width": 8,
+        "height": 2,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "Defl_disp",
+        "sendOnBlur": true,
+        "className": "big",
+        "topicType": "str",
+        "x": 890,
+        "y": 360,
+        "wires": [
+            [
+                "23bc8440270eda75"
+            ]
+        ]
+    },
+    {
+        "id": "1cce5b92baf82063",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "D_espira_mm_fin",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23bc8440270eda75",
+        "type": "change",
+        "z": "6705bbb95f3252fd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Defl_disp_fin",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1160,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ceec2581ae5fd68f",
         "type": "debug",
         "z": "6705bbb95f3252fd",
         "name": "debug 1",
@@ -878,21 +1351,24 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 610,
-        "y": 360,
+        "x": 820,
+        "y": 740,
         "wires": []
     },
     {
-        "id": "209e6109096bce1c",
-        "type": "python3-function",
+        "id": "f10f2db812c4638e",
+        "type": "debug",
         "z": "6705bbb95f3252fd",
-        "name": "",
-        "func": "from math import inf, pi\nimport pandas as pd\nimport numpy as np\n\n# Input Variables\nSet_pressure = 150 # +3%\nD_boquilla_mm = 16.3\nG_kpsi = 11600\nNa = 6\nD_exterior_mm = 24\nEsp_espiras = 4.5\nD_espira_mm = 3\nActual_pressure = 75\n\n# Input Variables\n# Set_pressure = msg[\"payload\"][\"Set_pressure\"]\n# D_espira_mm_initial = msg[\"payload\"][\"D_espira_mm\"]\n# D_exterior_mm = msg[\"payload\"][\"D_exterior_mm\"]\n# G_kpsi = msg[\"payload\"][\"G_kpsi\"]\n# Na = msg[\"payload\"][\"Na\"]\n# D_boquilla_mm = msg[\"payload\"][\"D_boquilla_mm\"]\n# Esp_espiras = msg[\"payload\"][\"Esp_espiras\"]\n\n# Constant Variables\nporc_defl = {\"porc_deflexion\": [0.25, 0.4, 0.5, 0.8, 0.9, 0.95]}\n\n# Conditioned Variables\nD_exterior_in = D_exterior_mm / 25.4\nD_boquilla_in = D_boquilla_mm / 25.4\nR_boquilla_in = D_boquilla_in / 2\nA_boquilla_in = pi * R_boquilla_in**2\nDefl_disp = Esp_espiras * Na\n\n\ndef findPressure(D_espira_mm, Defl_disp):  # type: ignore\n    D_espira_in = D_espira_mm / 25.4\n    var1 = pow(D_espira_in, 4) * G_kpsi\n    var2 = pow(D_exterior_in, 3) * Na * 8\n    K_1 = var1 / var2\n    K_2 = K_1 * 1000\n\n    table = pd.DataFrame(data=porc_defl)\n    table[\"desflexion_mm\"] = table[\"porc_deflexion\"] * Defl_disp\n    table[\"desflexion_in\"] = table[\"desflexion_mm\"] / 25.4\n    table[\"fmax\"] = table[\"desflexion_in\"] * K_2\n    table[\"pmax\"] = table[\"fmax\"] / A_boquilla_in\n\n    return table\n\n\nDefl_disp_itera = Defl_disp\nD_espira_mm_itera = D_espira_mm\nmin_pressure = inf\nmid_pressure = -inf\n\ntable_ite = pd.DataFrame(\n    columns=(\"D_espira_mm\", \"Defl_disp\", \"min_pressure\", \"mid_pressure\", \"max_pressure\")\n)\ntable_fin = table_ite\n\nflag = False\nif Set_pressure > Actual_pressure:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 30, 0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp - delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        min_pressure = table.iloc[0][\"pmax\"]\n        mid_pressure = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        max_pressure = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"min_pressure\": min_pressure,\n            \"mid_pressure\": mid_pressure,\n            \"max_pressure\": max_pressure,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if min_pressure < Set_pressure < mid_pressure:\n            table_fin = table_fin._append(row, ignore_index=True)\n\n    pass\nelse:\n    for D_espira_mm_itera in np.arange(D_espira_mm, 0, -0.5):\n        delta = abs(D_espira_mm - D_espira_mm_itera)\n        Defl_disp_itera = Defl_disp + delta * Na\n        table = findPressure(D_espira_mm_itera, Defl_disp_itera)\n        min_pressure = table.iloc[0][\"pmax\"]\n        mid_pressure = table.loc[table[\"porc_deflexion\"] == 0.5][\"pmax\"].values[0]\n        max_pressure = table.iloc[-1][\"pmax\"]\n        row = {\n            \"D_espira_mm\": D_espira_mm_itera,\n            \"Defl_disp\": Defl_disp_itera,\n            \"min_pressure\": min_pressure,\n            \"mid_pressure\": mid_pressure,\n            \"max_pressure\": max_pressure,\n        }\n        table_ite = table_ite._append(row, ignore_index=True)  # type: ignore\n        if min_pressure < Set_pressure < mid_pressure:\n            table_fin = table_fin._append(row, ignore_index=True)\n\n    pass\n\nprint(table)\nprint(table_fin)\n\n\n# agregar restriccion de que no supere 0.5 en porc_defl\n# ecuación del defl = espacio_entre_espiras * Na - delta(d)\n# delta(d) = d_i-d_actual\n",
-        "outputs": 1,
-        "x": 620,
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
         "y": 620,
-        "wires": [
-            []
-        ]
+        "wires": []
     }
 ]
